@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('pexels-pixabay-164527.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{ 
+    padding: 1.5rem;
+    border-radius: 1rem;
+    min-height: 45vh;
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h2{
+    color: #d1cfd1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+form{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form .amount{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form p{
+    color: #ffefff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+form select,
+button,
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+form input{
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    padding-left:0.5rem;
+    height: auto;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem; 
+}
+
+.dropdown i{
+    font-size: 1.5rem;
+    margin-top: 0.75rem; 
+}
+
+.select-container img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.select-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
+    max-width: 120px;
+    border-radius: 0.5rem;
+    border: 1px solid lightgray;
+    margin-top: 0.5rem; 
+}
+
+.select-container select{
+    background-color: transparent;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+}
+
+.msg{
+    margin: 1rem 0;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+form button{
+    height: auto;
+    width: 100%;
+    background-color: #c47baf;
+    color: aliceblue;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.75rem 1.5rem;
+}
+
+form button:hover{
+    background-color: #af4d98;
+    color:#d2cbd2 ;
+}
+
+form button:active{
+    background-color: #d2cbd2;
+    color: #af4d98;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) { /* Medium screens (tablets) */
+    .container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .container h2 {
+        font-size: 1.75rem;
+    }
+
+    form p {
+        font-size: 0.9rem;
+    }
+
+    .dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .select-container {
+        width: 100%;
+        max-width: 200px;
+    }
+
+        form button{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) { /* Small screens (phones) */
+    .container {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 0;
+        min-height: 100vh; /* Make container full height on small screens */
+    }
+
+    body {
+        align-items: flex-start; /* Align items to the start on small screens */
+        background-size: cover;
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+        padding-top: 3rem; /* Add some padding to the top */
+    }
+
+    .amount{
+        padding-top: 1rem; /* Add margin top */
+    }
+
+    form p {
+        font-size: 1.5rem;
+        text-align: center; /* Center text */
+        padding-top: 1rem; /* Add margin top */
+    }
+
+    .dropdown {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .dropdown i{
+        color: #ffffff;
+    }
+
+    .select-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form button{
+        justify-items: center;
+        align-items: center;
+        font-size: 1.1rem;
+        width: 70%;
+        padding: 0.75rem 1.5rem; /* Give horizontal padding as well */ 
+    }
+}
